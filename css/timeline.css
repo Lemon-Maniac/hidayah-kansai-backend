@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Montserrat";
+}
+
+.judul h3
+{
+  align-items: center;
+  text-align: center;
+  font-size: 2rem;
+}
+.container-timeline {
+  /* min-height: 100vh; */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0;
+}
+
+.no-agenda
+{
+  margin-top: 10rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.no-agenda h2{
+  font-size: 3rem;
+  text-align: center;
+  color: gray;
+}
+.timeline {
+  width: 80%;
+  height: auto;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timeline ul {
+  list-style: none;
+}
+.timeline ul li {
+  padding: 20px;
+  background-color: #A2B38B;
+  color: black;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.timeline ul li:last-child {
+  margin-bottom: 0;
+}
+
+/* timeline content */
+.timeline-content h1 {
+  text-transform: capitalize;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+
+.timeline-content .date {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+.timeline-content .jam{
+  font-size: 1.5rem;
+}
+
+.timeline-content .status{
+  /* margin-bottom: 2rem; */
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+
+.timeline-content .pemateri{
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+  font-size: 1.8rem;
+}
+
+.timeline-content .more{
+  display: none;
+  max-width: 35rem;
+}
+
+.timeline-content .comment{
+  font-size: 1.5rem;
+}
+
+.timeline-content .lokasi-event{
+  font-size: 1.5rem;
+}
+
+.timeline-content .sub-j{
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-top: 3rem;
+}
+
+.timeline-content .j-link{
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.timeline-content .link{
+  margin: 2rem 0;
+  font-size: 1.5rem;
+  text-transform: none;
+}
+
+.timeline-content .read{
+  background: rgb(6, 70, 53);
+  border: .2rem solid rgb(6, 70, 53);
+  border-radius: 1rem;
+  padding: 0.8rem 2rem;
+  color: white;
+  float: right;
+}
+
+/* timeline content end*/
+
+@media only screen and (min-width: 768px) {
+  .timeline:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background-color: #A2B38B;
+  }
+  .timeline ul li {
+    width: 50%;
+    position: relative;
+    margin-bottom: 50px;
+  }
+  .timeline ul li:nth-child(odd) {
+    float: left;
+    clear: right;
+    transform: translateX(-30px);
+    border-radius: 20px 0px 20px 20px;
+  }
+  .timeline ul li:nth-child(even) {
+    float: right;
+    clear: left;
+    transform: translateX(30px);
+    border-radius: 0px 20px 20px 20px;
+  }
+  .timeline ul li::before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #A2B38B;
+    top: 0px;
+  }
+  .timeline ul li:nth-child(odd)::before {
+    transform: translate(50%, -50%);
+    right: -30px;
+  }
+  .timeline ul li:nth-child(even)::before {
+    transform: translate(-50%, -50%);
+    left: -30px;
+  }
+  .timeline-content .date {
+    position: absolute;
+    top: -30px;
+  }
+  .timeline ul li:hover::before {
+    background-color: rgb(6, 70, 53);
+  }
+}
